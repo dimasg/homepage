@@ -1,0 +1,8 @@
+<frameset rows="20%,*,10%" name ="Main">
+   <frame src="title.htm" NAME="Title" SCROLLING="no" marginheight=0>
+   <frameset cols="25%,*">
+       <frame src="jb_index.htm" NAME="Index">
+       <frame src="contens.htm" NAME="Contens">
+   </frameset>
+   <frame src="bottom.htm" NAME="Bottom" SCROLLING="NO" marginheight=0>
+</frameset>

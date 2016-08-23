@@ -1,0 +1,120 @@
+body,
+html {
+	margin:0;
+	padding:0;
+}
+body {
+	min-width:720px; /* Prevent content from becoming unreachable in Gecko */
+}
+/* position:absolute for all browsers - the whole page scrolls */
+div#headerwrap {
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	height:50px;
+}
+/* position:fixed for modern browsers - header and footer do not scroll */
+body>div#headerwrap {
+	position:fixed;
+}
+div#header {
+	height: 50px;
+}
+div#title {
+	float:left;
+	margin-left:30px;
+}
+div#menu {
+	float:right;
+	margin:10px 30;
+}
+/* set a left margin to compensate for IE/Win always making room for a scrollbar */
+div#middlewrap {
+/* set left margin and bottom padding for IE5/Win */
+	padding:50px 0px 40px 0px;
+	margin-left:0;
+/* set left margin and bottom padding for others */
+	voice-family: "\"}\""; 
+	voice-family:inherit;
+	padding-bottom:40px;
+}
+/* set left margin for modern browsers */
+body>div#middlewrap {
+	margin-left:0;
+}
+div#middle {
+	margin:0 auto;
+}
+div#sidebar {
+	padding:15px 0px 60px 10px;
+	width:280px;
+	float:left;
+}
+div#content {
+	padding:15px 20 20 15;
+	margin-left:280px;
+	margin-right:150px;
+}
+div#banners {
+	padding:15px;
+	float:right;
+}
+/* no positioning for IE5/Win - the whole page scrolls */
+div#footerwrap {
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:40px;
+}
+body>div#footerwrap {
+	position:fixed;
+}
+div#footer {
+	height:40px;
+	margin:0 auto;
+}
+
+body,
+html {
+	font-family:"Trebuchet MS", Georgia, Verdana, serif;
+	color:#000;
+	background:#99CC99;
+}
+div#headerwrap,
+div#footer {
+	background:#003300;
+	color:#FFFFFF;
+}
+div#header {
+	padding:10px 15px 0px 15px;
+}
+div#header h1 {
+	text-align:left;
+	margin:0;
+	font-size:1.2em;
+}
+div #header p {
+	margin:0;
+	text-align:center;
+}
+div #sidebar {
+	text-align:center;
+	font-size:0.9em;
+}
+div#footer h2 {
+	text-align:center;
+	padding:0;
+	margin:0;
+	font-size:0.8em;
+}
+div #footer p {
+	margin:0;
+	padding:0;
+	text-align:center;
+	font-size:0.8em;
+}
+div#footer a {
+	color:#fff;
+}
