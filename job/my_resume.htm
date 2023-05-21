@@ -27,6 +27,18 @@
             .column-container > div:nth-child(odd) {
                 text-align: right;
             }
+
+            @media print {
+                .column-container {
+                    display: grid;
+                    grid-template-columns: 15% 80%; 
+                    grid-column-gap: 2em;
+                    grid-row-gap: 0.2em;
+                }
+                div:empty {
+                    padding: 0.2em;
+                }
+            }
         </style>
     </head>
     <body>
