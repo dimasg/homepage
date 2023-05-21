@@ -2,80 +2,165 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>My resume</title>
+
+        <style>
+            body {
+                background-color: #FFFFE0;
+                margin: 2em 0;
+            }
+            div {
+                font-family: “Consolas”,monospace;
+                text-align: left;
+                word-break: keep-all;
+                column-gap: 15em;
+            }
+            div:empty {
+                padding: 0.4em;
+            }
+            .column-container {
+                display: grid;
+                grid-template-columns: 10% 50%; 
+                grid-column-gap: 4em;
+                grid-row-gap: 0.3em;
+            }
+            .column-container > div {
+            }
+            .column-container > div:nth-child(odd) {
+                text-align: right;
+            }
+
+            @media print {
+                body {
+                    margin: 0;
+                }
+
+                .column-container {
+                    display: grid;
+                    grid-template-columns: 15% 80%; 
+                    grid-column-gap: 2em;
+                    grid-row-gap: 0.2em;
+                }
+                div:empty {
+                    padding: 0.2em;
+                }
+            }
+        </style>
     </head>
-    <body bgcolor="#FFFFE0">
+    <body>
+<div>
+    <div class="column-container">
+        <div>Name</div><div>Dmitry Grachev </div>
+        <div>birthday</div><div>07 Nov 1974</div>
+        <div>contacts</div><div></div>
+        <div>mobile</div><div>+7-903-745-8496</div>
+        <div>e-mail</div><div><a href="mailto:dmitriy@grachjev.com">dmitriy@grachjev.com</a></div>
+        <div>telegram</div><div><a href="http://t.me/dvg328">@dvg328</a></div>
+        <div>homepage</div><div><a href="http://www.grachjev.com">www.grachjev.com</a></div>
+        <div>linkedIn</div><div><a href="http://www.linkedin.com/in/dimasg">www.linkedin.com/in/dimasg</a></div>
+        <div></div><div></div>
+        <div>english</div><div>B1-B2</div>
+        <div></div><div></div>
 
+        <div>target</div><div>looking for frontend and/or backend middle/senior developer position </div>
+        <div></div><div></div>
 
-<pre>
+        <div>last projects</div><div></div>
+        <div></div><div></div>
 
-    Name:       Dmitry Grachev 
-birthday:       07 Nov 1974
-contacts:
-  mobile:       +7-903-745-8496
-  e-mail:       <a href="mailto:dmitriy@grachjev.com">dmitriy@grachjev.com</a>
-telegram:       <a href="http://t.me/dvg328">@dvg328</a>
-homepage:       <a href="http://www.grachjev.com">www.grachjev.com</a>
-linkedIn:       <a href="http://www.linkedin.com/in/dimasg">www.linkedin.com/in/dimasg</a>
+        <div>2010-2020</div>
+        <div>
+            Parallels, Odin, Ingram Micro
+            <br/><br/>
 
- english:       B1-B2
+            Parallels Business Automation: support (3rd line), bugfixing, refactoring  and new billing features, localization
+            <br/>
+            Tools: C++, PostgreSQL, MS SQL, perl, python
+            <br/><br/>
 
-  target:       looking for frontend and/or backend middle/senior developer position 
+            UX Team:
+            <br/><br/>
 
-last projects:
+            UX optimization for Parallels Billing Automation
+            <br/><br/>
 
-  2010-2020     Parallels, Odin, Ingram Micro
+            Development of mock-ups for new control panel applications, UX review  
+            <br/><br/>
 
-                Parallels Business Automation: support (3rd line), bugfixing, refactoring  and new billing features, localization
-                Tools: C++, PostgreSQL, MS SQL, perl, python
+            Development of sample application for New Control Panel (CCPv2)
+            <br/>
+            Tools: Javascript, PHP, Dojo.
+            <br/><br/>
 
-                UX Team:
+            UX researches by requests of other departments (designers, PMs, etc)
+            <br/>
+            Tools: Python, PostgreSQL, Excel, PowerPoint, Power BI
+            <br/><br/>
 
-                UX optimization for Parallels Billing Automation
+            Development and support for automatic collection of Google Analytics data (more 40 sources)
+            <br/>
+            Tools: Python, PostgreSQL
+            <br/><br/>
 
-                Development of mock-ups for new control panel applications, UX review  
+            Support and new features for International Ingram Micro Marketplace (4 installations, more 40 countries)
+            <br/>
+            Connection of external services - Google Analytics, Chat app, GDPR support
+            <br/>
+            Tools: ASP.Net, MS SQL, Javascript, jQuery, behave
+            <br/><br/>
 
-                Development of sample application for New Control Panel (CCPv2)
-                Tools: Javascript, PHP, Dojo.
+            Development and support of New Ingram Micro Marketplace Application as APS2 app, Google Analytics and external chat integration.
+            <br/>
+            Tools: Javascript, Dojo, React, Typescript, C#, cucumber
+            <br/><br/>
 
-                UX researches by requests of other departments (designers, PMs, etc)
-                Tools: Python, PostgreSQL, Excel, PowerPoint, Power BI
+            Development of new Reseller panel for external service
+            <br/>
+            Tools: Typescript, Vue2, Java, Springboot
+        </div>
 
-                Development and support for automatic collection of Google Analytics data (more 40 sources)
-                Tools: Python, PostgreSQL
+        <div></div><div></div>
 
-                Support and new features for International Ingram Micro Marketplace (4 installations, more 40 countries)
-                Connection of external services - Google Analytics, Chat app, GDPR support
-                Tools: ASP.Net, MS SQL, Javascript, jQuery, behave
+        <div>2007-2008</div>
+        <div>
+            .masterhost/.mastername hosting group (hosting and domain registrator)
+            <br/><br/>
 
-                Development and support of New Ingram Micro Marketplace Application as APS2 app, Google Analytics and external chat integration.
-                Tools: Javascript, Dojo, React, Typescript, C#, cucumber
+            Support, refactoring and new features for universal hosting billing
+            <br/>
+            Tools: Perl, PostgreSQL, XML, HTML::Template, Template Toolkit ...
+        </div>
 
-                Development of new Reseller panel for external service
-                Tools: Typescript, Vue2, Java, Springboot
+        <div></div><div></div>
 
-  2007-2008     .masterhost/.mastername hosting group (hosting and domain registrator)
+        <div>2002-2007</div>
+        <div>
+            Corbina Telecom Company
+            <br/><br/>
 
-                Support, refactoring and new features for universal hosting billing
-                Tools: Perl, PostgreSQL, XML, HTML::Template, Template Toolkit ...
+            Analysing, design and development of modules of billing system: accounting, calculating, bills, migration from old systems 
+            <br/>
+            Analysing, design and development of modules for preprocessing and tariffication for calls, internet traffic and other services
+            <br/>
+            Tools: Microsoft Visual C++ 6.0-7.1, STL, boost, ADO, Qt3-4, XML(SAX, DOM, XSLT, XSLT-FO).
+        </div>
 
-  2002-2007     Corbina Telecom Company
+        <div></div><div></div>
 
-                Analysing, design and development of modules of billing system: accounting, calculating, bills, migration from old systems 
-                Analysing, design and development of modules for preprocessing and tariffication for calls, internet traffic and other services
-                Tools: Microsoft Visual C++ 6.0-7.1, STL, boost, ADO, Qt3-4, 
-                XML(SAX, DOM, XSLT, XSLT-FO).
+        <div>1999-2002</div>
+        <div>
+            Interstron Ltd (Ex ML:Compilers, subdivision of MediaLingua).
+            <br/><br/>
 
-  1999-2002     Interstron Ltd (Ex ML:Compilers, subdivision of MediaLingua).
+            C++ Learnign IDE, UML Viewer
+            <br/><br/>
 
-                C++ Learnign IDE, UML Viewer
+            Adaptation for Interstron's C++ compiler: STLPort library, locale runtime, adaptation for ICU library, Xerces-C
+            <br/>
+            Development of test suite for standart C++ library
+            <br/>
+            Tools: IBM Visual Age C/C++ 3.5, 4.0 Professional, IBM Open Class Library, STL, Object File, IBM Team Connection, DB2, REXX
+        </div>
 
-                Adaptation for Interstron's C++ compiler: STLPort library, locale runtime, adaptation for ICU library, Xerces-C
-                Development of test suite for standart C++ library
-                Tools: IBM Visual Age C/C++ 3.5, 4.0 Professional,
-                IBM Open Class Library, STL, Object File,
-                IBM Team Connection, DB2, REXX
-
-</pre>
-
+</div>
     </body>
 </html>
