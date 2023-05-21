@@ -6,6 +6,7 @@
         <style>
             body {
                 background-color: #FFFFE0;
+                margin: 2em 0;
             }
             div {
                 font-family: “Consolas”,monospace;
@@ -29,6 +30,10 @@
             }
 
             @media print {
+                body {
+                    margin: 0;
+                }
+
                 .column-container {
                     display: grid;
                     grid-template-columns: 15% 80%; 
