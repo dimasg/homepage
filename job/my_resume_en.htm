@@ -8,7 +8,7 @@
         <style>
             body {
                 background-color: #FFFFE0;
-                margin: 2em 0;
+                margin: 0;
             }
             div {
                 font-family: “Consolas”,monospace;
@@ -19,37 +19,50 @@
             div:empty {
                 padding: 0.4em;
             }
-            .column-container {
+            .info-container, .prj-container {
                 display: grid;
                 grid-template-columns: 10% 50%;
                 grid-column-gap: 4em;
                 grid-row-gap: 0.3em;
+                margin: 0.5em 0;
             }
-            .column-container > div {
-            }
-            .column-container > div:nth-child(odd) {
+            .info-container>div:nth-child(odd), .prj-container>div:nth-child(odd) {
                 text-align: right;
             }
 
             div > p {
                 margin: 0;
             }
+            .When {
+                margin: 0.5em 0 0.5em;
+            }
             .Place, .Tools {
                 margin: 0 0 1em;
             }
 
-            @media screen and (max-width: 600px) {
-                .column-container {
-                    grid-template-columns: 10% 80%;
+            @media screen and (max-width: 800px) {
+                .info-container {
+                    grid-template-columns: 25% 75%;
+                    grid-column-gap: 1em;
+                    margin: 0.25em 0;
+                }
+                div:empty {
+                    padding: 0.2em;
+                }
+                .prj-container {
+                    grid-template-columns: 100%;
+                    margin: 0.25em 0;
+                }
+                .prj-container > div:nth-child(odd) {
+                    text-align: left;
+                }
+                .When {
+                    margin: 0.25em 0 0.25em;
                 }
             }
 
             @media print {
-                body {
-                    margin: 0;
-                }
-
-                .column-container {
+                .info-container, .prj-container {
                     display: grid;
                     grid-template-columns: 15% 80%;
                     grid-column-gap: 2em;
@@ -63,7 +76,7 @@
     </head>
     <body>
 <div>
-    <div class="column-container">
+    <div class="info-container">
         <div>Name</div><div>Dmitry Grachev</div>
         <div>birthday</div><div>07 Nov 1974</div>
         <div>contacts</div><div></div>
@@ -78,11 +91,12 @@
 
         <div>target</div><div>looking for frontend and/or backend middle/senior developer position</div>
         <div></div><div></div>
+    </div>
 
-        <div>last projects</div><div></div>
-        <div></div><div></div>
+    <div class="prj-container">
+        <div></div><div class="Place">last projects</div>
 
-        <div>2010-2020</div>
+        <div class="When">2010-2020</div>
         <div>
             <p class="Place">
             Parallels, Odin, Ingram Micro
@@ -151,7 +165,7 @@
             </p>
         </div>
 
-        <div>2007-2008</div>
+        <div class="When">2007-2008</div>
         <div>
             <p class="Place">
             .masterhost/.mastername hosting group (hosting and domain registrator)
@@ -165,7 +179,7 @@
             </p>
         </div>
 
-        <div>2002-2007</div>
+        <div class="When">2002-2007</div>
         <div>
             <p class="Place">
             Corbina Telecom Company
@@ -182,7 +196,7 @@
             </p>
         </div>
 
-        <div>1999-2002</div>
+        <div class="When">1999-2002</div>
         <div>
             <p class="Place">
             Interstron Ltd (Ex ML:Compilers, subdivision of MediaLingua).
