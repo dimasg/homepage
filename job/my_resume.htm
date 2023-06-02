@@ -8,7 +8,7 @@
         <style>
             body {
                 background-color: #FFFFE0;
-                margin: 2em 0;
+                margin: 0;
             }
             div {
                 font-family: “Consolas”,monospace;
@@ -19,34 +19,57 @@
             div:empty {
                 padding: 0.4em;
             }
-            .column-container {
+            .info-container, .prj-container {
                 display: grid;
                 grid-template-columns: 10% 50%;
                 grid-column-gap: 4em;
                 grid-row-gap: 0.3em;
+                margin: 0.5em 0;
             }
-            .column-container > div {
-            }
-            .column-container > div:nth-child(odd) {
+            .info-container>div:nth-child(odd), .prj-container>div:nth-child(odd) {
                 text-align: right;
             }
 
-            @media screen and (max-width: 600px) {
-                .column-container {
-                    grid-template-columns: 10% 70%;
+            div > p {
+                margin: 0;
+            }
+            .When {
+                margin: 0.5em 0 0.5em;
+            }
+            .Place, .Tools {
+                margin: 0 0 1em;
+            }
+
+            @media screen and (max-width: 800px) {
+                .info-container {
+                    grid-template-columns: 25% 75%;
+                    grid-column-gap: 1em;
+                    margin: 0.25em 0;
+                }
+                div:empty {
+                    padding: 0.2em;
+                }
+                .prj-container {
+                    grid-template-columns: 100%;
+                    margin: 0.25em 0;
+                }
+                .prj-container > div:nth-child(odd) {
+                    text-align: left;
+                }
+                .When {
+                    margin: 0.25em 0 0.25em;
                 }
             }
 
             @media print {
-                body {
-                    margin: 0;
-                }
-
-                .column-container {
+                .info-container, .prj-container {
                     display: grid;
                     grid-template-columns: 15% 80%;
                     grid-column-gap: 2em;
                     grid-row-gap: 0.2em;
+                }
+                .info-container>div, .prj-container>div {
+                    break-inside: avoid;
                 }
                 div:empty {
                     padding: 0.2em;
@@ -56,7 +79,7 @@
     </head>
     <body>
 <div>
-    <div class="column-container">
+    <div class="info-container">
         <div>ФИО</div><div>Грачев Дмитрий Владимирович</div>
         <div>родился</div><div>7 ноября 1974 года</div>
         <div></div><div></div>
@@ -70,172 +93,209 @@
         <div></div><div></div>
         <div>цель</div><div>Нахождение работы на должность ведущего программиста</div>
         <div></div><div></div>
+    </div>
+    <div class="prj-container">
+        <div></div><div class="Place">краткая рабочая автобиография:</div>
 
+        <div class="When">2010-2020</div>
         <div>
-        </div>
-        <div>
-        краткая рабочая автобиография:
-        </div>
-        <div></div><div></div>
-
-        <div>2010-2020</div>
-        <div>
+            <p class="Place">
             Parallels, Odin, Ingram Micro.
-            <br/><br/>
+            </p>
+            <p>
             Parallels Business Automation: поддержка существующих, рефакторинг и написание
             новых модулей биллинга, а так же модулей и утилит поддержки локализации.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: C++, PostgreSQL, MS SQL, XML, Perl, Python.
-            <br/><br/>
+            </p>
 
+            <p class="Place">
             UX Team:
-            <br/><br/>
+            </p>
 
+            <p>
             Оптимизация и улучшение "узких мест" пользовательской и провайдерской панелей управления.
-            <br/><br/>
+            </p>
 
+            <p>
             Участие в разработке макетов дизайна новых приложений панелей управления, ревью готовых
             приложений.
-            <br/><br/>
+            </p>
 
+            <p>
             Разработка и поддержка APS2 приложения-образца для новой панели управления пользователя (CCPv2).
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Javascript, PHP, Dojo.
-            <br/><br/>
+            </p>
 
+            <p>
             Проведение UX исследований по запросам дизайнеров.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Python, PostgreSQL, Excel, PowerPoint, Power BI.
-            <br/><br/>
+            </p>
 
+            <p>
             Обеспечение автоматического сбора и обработки данных Google Analytics (более 40 стран-источников).
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Python, PostgreSQL.
-            <br/><br/>
+            </p>
 
+            <p>
             Поддержка и разработка нового функционала для международного маркетплейса Ingram Micro (4 инсталляции, более 40 стран).
             Подключение внежних сервисов - Google Analytics, стороннее чат-приложение, поддержка требований GDPR.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: ASP.Net, MS SQL, Javascript, jQuery, behave.
-            <br/><br/>
+            </p>
 
+            <p>
             Разработка и поддержка нового маркетплейса на базе APS2 приложения. Подключение и покрытие всей цепочки покупки Google Analytics.
             Подключение внешнего сервиса - чата поддержки.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Javascript, Dojo, React, Typescript, C#, cucumber.
-            <br/><br/>
+            </p>
 
+            <p>
             Разработка новой дилерской панели для прозрачного использования стороннего реселлерского сервиса.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Typescript, Vue2, Java, Springboot.
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>2007-2008</div>
+        <div class="When">2007-2008</div>
         <div>
+            <p class="Place">
             Группа компаний .masterhost.
-            <br/><br/>
+            </p>
 
+            <p>
             Поддержка, рефакторинг и написание новых модулей биллинга компании (хостинг).
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Perl, PostgreSQL, XML, HTML::Template, Template Toolkit ...
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>2002-2007</div>
+        <div class="When">2002-2007</div>
         <div>
+            <p class="Place">
             Компания Corbina Telecom (ЗАО "Инвестоэлектросвязь").
-            <br/><br/>
+            </p>
 
+            <p>
             Анализ, проектирование и внедрение аккаунтинга, системы генерации
             начислений и выставления счетов, миграция в новую систему всех существующих
             клиентов и их контрактов.
-            <br/><br/>
+            </p>
 
+            <p>
             Анализ и проектирование системы ведения проектов, частичной поддержки CRM.
-            <br/><br/>
+            </p>
 
+            <p>
             Анализ, проектирование и реализация систем препроцессинга, тарификации звонков и прочих
             услуг, статистики.
-            <br/>
-            Инструментарий: Microsoft Visual C++ 6.0-7.1, STL, boost, ADO, Qt3-4,
-            XML(SAX, DOM, XSLT, XSLT-FO).
-            <br/><br/>
+            </p>
+            <p class="Tools">
+            Инструментарий: Microsoft Visual C++ 6.0-7.1, STL, boost, ADO, Qt3-4, XML(SAX, DOM, XSLT, XSLT-FO).
+            </p>
 
+            <p class="Tools">
             Совместно с сотрудниками IDT Corp. проводил анализ бизнес-процессов
             компании. Подготовлена документация для определения узких мест,
             проведения автоматизации документооборота.
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>1999-2002</div>
+        <div class="When">1999-2002</div>
         <div>
+            <p class="Place">
             АО Интерстрон (ранее ML:Compilers, дочерняя компания фирмы
             МедиаЛингва).
-            <br/><br/>
+            </p>
 
+            <p>
             Доведение до коммерческого состояния программы "Визуализатор"
             (UML Viewer), редизайн и рефакторинг большого объема кода.
             Проектирование, дизайн и реализация новых функций.
-            <br/><br/>
+            </p>
 
+            <p>
             Адаптация для компилятора и виртуальной машины языка С++
             фирмы библиотеки STLport (версия стандартной библиотеки С++),
             написание для нее locale runtime. Адаптация библиотек
             ICU (IBM International Components for Unicode) и Xerces-C
             (XML parser, DOM, SAX, SAX2).
-            <br/><br/>
+            </p>
 
+            <p>
             Разработка тестового набора для стандартной библиотеки С++.
-            <br/><br/>
+            </p>
 
+            <p>
             Реализация библиотеки объектов (COM) для доступа к содержимому
             Microsoft MAPI из Sledopyt API фирмы МедиаЛингва.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Microsoft Visual C++ 5.0, 6.0, COM, ATL, MAPI.
-            <br/><br/>
+            </p>
 
+            <p>
             Создание интегриpованной среды системы pазработки/обучения
             програмированию на языке С++.
-            <br/>
-            Иструментарий: IBM Visual Age C/C++ 3.5, 4.0 Professional,
-            IBM Open Class Library, STL, Object File.
-            <br/><br/>
+            </p>
+            <p class="Tools">
+            Инструментарий: IBM Visual Age C/C++ 3.5, 4.0 Professional, IBM Open Class Library, STL, Object File.
+            </p>
 
+            <p class="Tools">
             В pабочем процессе использовались IBM Team Connection (средство
             групповой работы/ведения версий, использует DB2 для хранения и
             построения запросов), Lotus Notes. Также в рабочем процессе
             использовались скрипты на языках REXX и Perl.
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>1997-1998</div>
+        <div class="When">1997-1998</div>
         <div>
-            OOO SATS. Разработка модулей и сопровождение хостового ПО
+            <p class="Place">
+            OOO SATS.
+            </p>
+            <p>
+            Разработка модулей и сопровождение хостового ПО
             мониторинга банкомата, осуществляющего коммуникации,
             транзакции и т.д. Многозадачное программирование (threads).
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: IBM Visual Age C/C++ 3.0
-            <br/>
+            </p>
+            <p class="Tools">
             Обслуживание, конфигурирование, построение сценария поведения,
             создание загрузочного комплекта для банкоматов NCR 4-го
             поколения (56XX, Persona Sxx). Мелкая правка, сопровождение ПО
             POS-терминалов Verifone.
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>1994-1997</div>
+        <div class="When">1994-1997</div>
         <div>
-            НПП Инфоком-Сервис. Разработка программ, входящих в общий
+            <p class="Place">
+            НПП Инфоком-Сервис.
+            </p>
+            <p>
+            Разработка программ, входящих в общий
             комплекс программ "Среда Доступа" и "Почтовая служба".
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Borland C/C++ 3.1/Turbo Vision 1.0.
-            <br/>
+            </p>
+            <p>
             Установка и сопровождение в начальной стадии развертывания
             системы (Программно-аппаратные, функционально полные комплексы
             корпоративной сети для организаций органов власти на базе
@@ -243,47 +303,55 @@
             (Netware 3.12+MPR 3.0)). Исполнял обязанности руководителя
             группы программистов "Почтовой Службы",
             производился перенос ПО под Windows.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Symantec C/C++ 7.2/MFC 2.5/db_Vista 3.21(Raima).
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>1993-1994</div>
+        <div class="When">1993-1994</div>
         <div>
-            Центр "ДАР"(Диалектика, Адаптация, Развитие). Написание
-            АРM Школьной Медсестры (Win3.1), поддержка внутренних
+            <p class="Place">
+            Центр "ДАР"(Диалектика, Адаптация, Развитие).
+            </p>
+            <p>
+            Написание АРM Школьной Медсестры (Win3.1), поддержка внутренних
             пользователей, сборка IBM-совместимых компьютеров и др.
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Turbo C/C++ for Windows 1.0/OWL 1.0.
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>1993-1993</div>
+        <div class="When">1993-1993</div>
         <div>
-            НИИ ЭнергоСетьПроект. Написание информационной системы для
+            <p class="Place">
+            НИИ ЭнергоСетьПроект.
+            </p>
+            <p>
+            Написание информационной системы для
             учета объектов Гражданской обороны (DOS/Графика).
-            <br/>
+            </p>
+            <p class="Tools">
             Инструментарий: Borland C/C++ 2.0(DOS)/mtegl(граф. библ.).
+            </p>
         </div>
 
-        <div></div><div></div>
-
-        <div>1991-1993</div>
+        <div class="When">1991-1993</div>
         <div>
             Учеба в МЭИ на факультете АВТ, каф.ММ (семестры 1-4).
         </div>
 
-        <div></div><div></div>
-
-        <div>1991</div>
+        <div class="When">1991</div>
         <div>
+            <p>
             Окончил среднюю школу номер 637 со специальностью
             лаборант-программист (квал. оценка отлично).
-            <br/><br/>
+            </p>
+            <p>
             Призер конкурса Borland-Contest-91 (2-е место в своей
             возрастной категории).
+            </p>
         </div>
     </div>
 
